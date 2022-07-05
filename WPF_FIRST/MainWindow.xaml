@@ -11,18 +11,18 @@
             <ColumnDefinition Width="51*"/>
             <ColumnDefinition Width="704*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="button1" Content="1" HorizontalAlignment="Left" Height="41" Margin="15,31,0,0" VerticalAlignment="Top" Width="60" Click="button1_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="button1" Content="1" HorizontalAlignment="Left" Height="41" Margin="15,31,0,0" VerticalAlignment="Top" Width="60" Click="button1_Click" Grid.ColumnSpan="2"  Command="{Binding PlusCommand}"/>
         <TextBox x:Name="textBox_in1" HorizontalAlignment="Left" Height="42" Margin="247,31,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="80" RenderTransformOrigin="2.522,-0.271" Grid.Column="1"/>
-        <Button x:Name="button2" Content="2" HorizontalAlignment="Left" Height="41" Margin="15,79,0,0" VerticalAlignment="Top" Width="60" Click="button2_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="button2" Content="2" HorizontalAlignment="Left" Height="41" Margin="15,79,0,0" VerticalAlignment="Top" Width="60" Click="button1_Click" Grid.ColumnSpan="2"/>
         <Button x:Name="button_del" Content="del" HorizontalAlignment="Left" Height="41" Margin="15,227,0,0" VerticalAlignment="Top" Width="60" Click="button_del_Click" RenderTransformOrigin="0.853,2.85" Grid.ColumnSpan="2"/>
-        <Button x:Name="button3" Content="3" HorizontalAlignment="Left" Height="41" Margin="15,127,0,0" VerticalAlignment="Top" Width="60" Click="button3_Click" Grid.ColumnSpan="2"/>
-        <Button x:Name="button4" Content="4" HorizontalAlignment="Left" Height="41" Margin="31,31,0,0" VerticalAlignment="Top" Width="60" Click="button4_Click" Grid.Column="1"/>
-        <Button x:Name="button5" Content="5" HorizontalAlignment="Left" Height="41" Margin="31,79,0,0" VerticalAlignment="Top" Width="60" Click="button5_Click" Grid.Column="1"/>
-        <Button x:Name="button6" Content="6" HorizontalAlignment="Left" Height="41" Margin="31,127,0,0" VerticalAlignment="Top" Width="60" Click="button6_Click" Grid.Column="1"/>
-        <Button x:Name="button7" Content="7" HorizontalAlignment="Left" Height="41" Margin="98,31,0,0" VerticalAlignment="Top" Width="60" Click="button7_Click" Grid.Column="1"/>
-        <Button x:Name="button8" Content="8" HorizontalAlignment="Left" Height="41" Margin="98,79,0,0" VerticalAlignment="Top" Width="60" Click="button8_Click" Grid.Column="1"/>
-        <Button x:Name="button9" Content="9" HorizontalAlignment="Left" Height="41" Margin="98,127,0,0" VerticalAlignment="Top" Width="60" Click="button9_Click" Grid.Column="1"/>
-        <Button x:Name="button0" Content="0" HorizontalAlignment="Left" Height="41" Margin="31,177,0,0" VerticalAlignment="Top" Width="60" Click="button0_Click" Grid.Column="1"/>
+        <Button x:Name="button3" Content="3" HorizontalAlignment="Left" Height="41" Margin="15,127,0,0" VerticalAlignment="Top" Width="60" Click="button1_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="button4" Content="4" HorizontalAlignment="Left" Height="41" Margin="31,31,0,0" VerticalAlignment="Top" Width="60" Click="button1_Click" Grid.Column="1"/>
+        <Button x:Name="button5" Content="5" HorizontalAlignment="Left" Height="41" Margin="31,79,0,0" VerticalAlignment="Top" Width="60" Click="button1_Click" Grid.Column="1"/>
+        <Button x:Name="button6" Content="6" HorizontalAlignment="Left" Height="41" Margin="31,127,0,0" VerticalAlignment="Top" Width="60" Click="button1_Click" Grid.Column="1"/>
+        <Button x:Name="button7" Content="7" HorizontalAlignment="Left" Height="41" Margin="98,31,0,0" VerticalAlignment="Top" Width="60" Click="button1_Click" Grid.Column="1"/>
+        <Button x:Name="button8" Content="8" HorizontalAlignment="Left" Height="41" Margin="98,79,0,0" VerticalAlignment="Top" Width="60" Click="button1_Click" Grid.Column="1"/>
+        <Button x:Name="button9" Content="9" HorizontalAlignment="Left" Height="41" Margin="98,127,0,0" VerticalAlignment="Top" Width="60" Click="button1_Click" Grid.Column="1"/>
+        <Button x:Name="button0" Content="0" HorizontalAlignment="Left" Height="41" Margin="31,177,0,0" VerticalAlignment="Top" Width="60" Click="button1_Click" Grid.Column="1"/>
         <Button x:Name="button_div" Content="/" HorizontalAlignment="Left" Height="41" Margin="165,31,0,0" VerticalAlignment="Top" Width="60" Click="button_div_Click" Grid.Column="1"/>
         <Button x:Name="button_mull" Content="X" HorizontalAlignment="Left" Height="41" Margin="165,79,0,0" VerticalAlignment="Top" Width="60" Click="button_mull_Click" Grid.Column="1"/>
         <Button x:Name="button_sub" Content="-" HorizontalAlignment="Left" Height="41" Margin="165,127,0,0" VerticalAlignment="Top" Width="60" Click="button_sub_Click" Grid.Column="1"/>
@@ -36,7 +36,9 @@
         <Button x:Name="button_point" Content="." HorizontalAlignment="Left" Height="41" Margin="31,227,0,0" VerticalAlignment="Top" Width="60" Click="button_point_Click" RenderTransformOrigin="0.853,2.85" Grid.Column="1"/>
         <Button x:Name="button_1divx" Content="1/x" HorizontalAlignment="Left" Height="41" Margin="98,178,0,0" VerticalAlignment="Top" Width="60" Click="button_1divx_Click" Grid.Column="1"/>
         <Button x:Name="button_x2" Content="x²" HorizontalAlignment="Left" Height="41" Margin="98,227,0,0" VerticalAlignment="Top" Width="60" Click="button_x2_Click" Grid.Column="1"/>
-        <TextBox x:Name="textBox_in1_Copy" HorizontalAlignment="Left" Height="42" Margin="247,98,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="80" RenderTransformOrigin="2.522,-0.271" Grid.Column="1" Text="{Binding Path=Title}"/>
+        <TextBox x:Name="textBox_in1_Copy" HorizontalAlignment="Left" Height="42" Margin="247,98,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="80" RenderTransformOrigin="2.522,-0.271" Grid.Column="1" Text="{Binding Path=S1, Mode=OneWay}" />
+        <TextBox x:Name="textBox_in1_Copy1" HorizontalAlignment="Left" Height="42" Margin="558,92,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="80" RenderTransformOrigin="2.522,-0.271" Grid.Column="1" Text="{Binding Path=Total,Mode=OneWay}"/>
+        <TextBox x:Name="textBox_in1_Copy3" HorizontalAlignment="Left" Height="42" Margin="406,95,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="80" RenderTransformOrigin="2.522,-0.271" Grid.Column="1" Text="{Binding Path=S2,Mode=OneWay}"/>
 
     </Grid>
 </Window>
